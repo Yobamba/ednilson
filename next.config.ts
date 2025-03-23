@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: '/ednilson',
+  assetPrefix: '/ednilson/',
+  images: {
+    unoptimized: true,
+  }
 };
 
 export default nextConfig;
