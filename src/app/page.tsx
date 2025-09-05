@@ -6,8 +6,19 @@ import SocialLinks from '@/components/SocialLinks';
 import FadeIn from '@/components/FadeIn';
 
 const projects = [
-  
-  
+
+  {
+    title: 'BonusNow',
+    description: 'A bonus and incentive planning tool.',
+    imageUrl: '/images/bonus.png',
+    projectUrl: 'https://bonusnow-1.onrender.com/'
+  },
+  {
+    title: 'TO DO MANAGER',
+    description: 'A personal kanban board to manage your tasks.',
+    imageUrl: '/images/Task Manager.png',
+    projectUrl: 'https://to-do-list-manager-nu.vercel.app/'
+  },
   {
     title: 'TIME ALLOCATOR',
     description: 'AI Powered tool that helps you allocate your time efficiently.',
@@ -15,19 +26,14 @@ const projects = [
     projectUrl: 'https://time-allocator.vercel.app/'
   },
   {
-    title: 'TO DO MANAGER',
-    description: 'To-Do List Manager is the ultimate task management solution designed for users seeking simplicity and efficiency.',
-    imageUrl: '/images/Task Manager.png',
-    projectUrl: 'https://to-do-list-manager-nu.vercel.app/'
-  },
-  {
     title: 'NOTE CAPTURE',
-    description: 'A full-stack note-taking application.',
+    description: 'Documentation for the RESTful API for my note-taking application.',
     imageUrl: '/images/notes_api_ss.png',
     projectUrl: 'https://note-capture.onrender.com/api-docs/#/'
   }
  
   // Add more projects here
+
 ];
 
 export default function Home() {
