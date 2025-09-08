@@ -36,6 +36,12 @@ const projects = [
     imageUrl: '/images/bbq.png',
     projectUrl: 'https://www.mathewsbbqsupply.com/'
   },
+  {
+    title: "SherwoodAI",
+    description: 'A platform for AI Generated videos .',
+    imageUrl: '/images/sherwood.png',
+    projectUrl: 'https://sherwoodai.vercel.app/'
+  },
   // {
   //   title: 'TO DO MANAGER',
   //   description: 'A personal kanban board to manage your tasks.',
