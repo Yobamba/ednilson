@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: "Mathews's BBQ",
-    description: 'A BBQ Equipment Supplier website .',
+    description: 'A BBQ Equipment Supplier website.',
     imageUrl: '/images/bbq.png',
     projectUrl: 'https://www.mathewsbbqsupply.com/'
   },
@@ -56,7 +56,7 @@ const projects = [
   }, 
   {
     title: "SherwoodAI",
-    description: 'A platform for AI Generated videos .',
+    description: 'A platform for AI Generated videos.',
     imageUrl: '/images/sherwood.png',
     projectUrl: 'https://sherwoodai.vercel.app/'
   }
