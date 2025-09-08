@@ -48,7 +48,7 @@ export default function Header() {
 
         <FadeIn duration={150}>
         <a 
-          href="/Ednilson_CV. (2).pdf"
+          href="/ednilson_resume.pdf"
           download
           className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition"
         >
