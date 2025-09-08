@@ -5,12 +5,14 @@ import ProjectCard from '@/components/ProjectCard';
 import SocialLinks from '@/components/SocialLinks';
 import FadeIn from '@/components/FadeIn';
 import Avatar from '@mui/material/Avatar'
+import Link from 'next/link';
 import {
 
   Grid,
   Box,
   Paper,
   Typography,
+
   Chip,
 } from '@mui/material'
 
@@ -23,17 +25,29 @@ const projects = [
     projectUrl: 'https://bonusnow-1.onrender.com/'
   },
   {
-    title: 'TO DO MANAGER',
-    description: 'A personal kanban board to manage your tasks.',
-    imageUrl: '/images/Task Manager.png',
-    projectUrl: 'https://to-do-list-manager-nu.vercel.app/'
+    title: 'The Woodland Retreat',
+    description: 'A private vacation rental website. ',
+    imageUrl: '/images/woodland.png',
+    projectUrl: 'https://www.holidayislandretreat.com/'
   },
   {
-    title: 'TIME ALLOCATOR',
-    description: 'AI Powered tool that helps you allocate your time efficiently.',
-    imageUrl: '/images/time-allocator.png',
-    projectUrl: 'https://time-allocator.vercel.app/'
+    title: "Mathews's BBQ",
+    description: 'A BBQ Equipment Supplier website .',
+    imageUrl: '/images/bbq.png',
+    projectUrl: 'https://www.mathewsbbqsupply.com/'
   },
+  // {
+  //   title: 'TO DO MANAGER',
+  //   description: 'A personal kanban board to manage your tasks.',
+  //   imageUrl: '/images/Task Manager.png',
+  //   projectUrl: 'https://to-do-list-manager-nu.vercel.app/'
+  // },
+  // {
+  //   title: 'TIME ALLOCATOR',
+  //   description: 'AI Powered tool that helps you allocate your time efficiently.',
+  //   imageUrl: '/images/time-allocator.png',
+  //   projectUrl: 'https://time-allocator.vercel.app/'
+  // },
   {
     title: 'NOTE CAPTURE',
     description: 'Documentation for the RESTful API for my note-taking application.',
@@ -54,36 +68,35 @@ export default function Home() {
       <FadeIn duration={150}><h2 className="text-3xl font-bold mb-8 text-center">Projects</h2></FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <FadeIn key={project.title} duration={150}>
+            <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer" key={project.title}>
+              {/* <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer"> */}
+              
+            <FadeIn duration={150}>
               <ProjectCard
                 {...project}
               />
             </FadeIn>
+            </Link>
           ))}
         </div>
       </section>
-      <FadeIn duration={150}><SocialLinks /></FadeIn>
 
       {/* Skills */}
-      <div className="padded-bottom div-skills">
+      <div className="padded-bottom max-w-6xl mx-auto px-4 py-16">
         <Typography gutterBottom variant="h3" component="div">
           Skills
         </Typography>
         <br></br>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={3}>
-            {/* Frontend */}
-            <Grid>
+            <Grid size={{ xs: 12, sm: 4 }}>
+              {/* Frontend */}
               <Paper square elevation={0}>
                 <h3>Frontend</h3>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                   <Chip
                     avatar={<Avatar src="react1.png"></Avatar>}
                     label="React"
-                  />
-                  <Chip
-                    avatar={<Avatar src="svelte1.png"></Avatar>}
-                    label="Svelte"
                   />
                   <Chip
                     avatar={<Avatar src="tailwind.png"></Avatar>}
@@ -102,12 +115,10 @@ export default function Home() {
               <br></br>
             </Grid>
 
-            {/* Backend */}
-            <Grid>
+            <Grid size={{ xs: 12, sm: 4 }}>
               <Paper square elevation={0}>
                 <h3>Backend</h3>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  <Chip avatar={<Avatar src="go1.png"></Avatar>} label="Go" />
                   <Chip
                     avatar={<Avatar src="node1.png"></Avatar>}
                     label="Node.js"
@@ -119,10 +130,6 @@ export default function Home() {
                   <Chip
                     avatar={<Avatar src="jest1.png"></Avatar>}
                     label="Jest"
-                  />
-                  <Chip
-                    avatar={<Avatar src="gql.png"></Avatar>}
-                    label="GraphQL"
                   />
                   <Chip
                     avatar={<Avatar src="rest.png"></Avatar>}
@@ -137,18 +144,6 @@ export default function Home() {
                     label="PostreSQL"
                   />
                   <Chip
-                    avatar={<Avatar src="serverless.png"></Avatar>}
-                    label="Serverless"
-                  />
-                  <Chip
-                    avatar={<Avatar src="rabbit.png"></Avatar>}
-                    label="RabbitMQ"
-                  />
-                  <Chip
-                    avatar={<Avatar src="sequelize.png"></Avatar>}
-                    label="Sequelize"
-                  />
-                  <Chip
                     avatar={<Avatar src="mongoose.png"></Avatar>}
                     label="Mongoose"
                   />
@@ -157,8 +152,7 @@ export default function Home() {
               <br></br>
             </Grid>
 
-            {/* Infrastructure */}
-            <Grid>
+            <Grid size={{ xs: 12, sm: 4 }}>
               <Paper square elevation={0}>
                 <h3>Infrastructure</h3>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -171,10 +165,6 @@ export default function Home() {
                     label="Kubernetes"
                   />
                   <Chip avatar={<Avatar src="aws1.png"></Avatar>} label="AWS" />
-                  <Chip
-                    avatar={<Avatar src="prometheus.png"></Avatar>}
-                    label="Prometheus"
-                  />
                   <Chip
                     avatar={<Avatar src="sentry.png"></Avatar>}
                     label="Sentry"
@@ -194,6 +184,7 @@ export default function Home() {
           </Grid>
           </Box>
       </div>
+      <FadeIn duration={150}><SocialLinks /></FadeIn>
     </main>
   );
 }

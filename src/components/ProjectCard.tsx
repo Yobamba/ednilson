@@ -7,14 +7,14 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  projectUrl: string;
+  // projectUrl: string;
 }
 
 export default function ProjectCard({
   title,
   description,
   imageUrl,
-  projectUrl
+  // projectUrl
 }: ProjectCardProps) {
   return (
     <motion.div 
@@ -30,14 +30,14 @@ export default function ProjectCard({
       />
       <div className="p-6">
         <h3 className="text-2xl font-bold mb-2">
-          <a 
+          {/* <a 
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600"
           >
             {title}
-          </a>
+          </a> */}
         </h3>
         <p className="text-gray-600">{description}</p>
       </div>
