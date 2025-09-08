@@ -36,12 +36,6 @@ const projects = [
     imageUrl: '/images/bbq.png',
     projectUrl: 'https://www.mathewsbbqsupply.com/'
   },
-  {
-    title: "SherwoodAI",
-    description: 'A platform for AI Generated videos .',
-    imageUrl: '/images/sherwood.png',
-    projectUrl: 'https://sherwoodai.vercel.app/'
-  },
   // {
   //   title: 'TO DO MANAGER',
   //   description: 'A personal kanban board to manage your tasks.',
@@ -59,6 +53,12 @@ const projects = [
     description: 'Documentation for the RESTful API for my note-taking application.',
     imageUrl: '/images/notes_api_ss.png',
     projectUrl: 'https://note-capture.onrender.com/api-docs/#/'
+  }, 
+  {
+    title: "SherwoodAI",
+    description: 'A platform for AI Generated videos .',
+    imageUrl: '/images/sherwood.png',
+    projectUrl: 'https://sherwoodai.vercel.app/'
   }
  
   // Add more projects here
